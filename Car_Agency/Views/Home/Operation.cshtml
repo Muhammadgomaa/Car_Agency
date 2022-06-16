@@ -1,0 +1,252 @@
+﻿@{ 
+    //string Type = ViewBag.userType;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/Content/css/all.min.css" rel="stylesheet">
+    <link href="~/Content/css/normalize.css" rel="stylesheet">
+
+    <link href="~/Content/css/Proj6.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&family=Open+Sans:wght@300;400;700&display=swap"
+          rel="stylesheet">
+
+    <title>Operation Page</title>
+
+    
+</head>
+
+<body>
+    <div class="header-op">
+        <div class="container">
+            <img src="~/Content/photos/logo.png" alt="logo">
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Main")</li>
+                    <li><a href="#users"> Users </a></li>
+                    <li><a href="#products"> Products </a></li>
+                    <li><a href="#suppliers"> Suppliers</a></li>
+                    <li><a href="#customers">Customers</a></li>
+                    <li><a href="#sales">Sales </a></li>
+                    <li>@Html.ActionLink("Logout", "Logout")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="landing-op" id="home">
+        <div class="intro">
+            <h1><span>Journy</span> Start</h1><br>
+            <h1>With <span>Love</span></h1>
+        </div>
+    </div>
+    <div class="users" id="users">
+        <h2 class="special-heading">Users</h2>
+        <div class="container">
+            <div class="userscontent">
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/adduser.png" alt="add"><br>
+                        <a onclick="">
+                            @Html.ActionLink("Add User Information", "Create", "Users")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/updateuser.png" alt="update"><br>
+                        <a onclick="">
+                              @Html.ActionLink("Update User Information", "Update", "Users")
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/deleteuser.png" alt="delete"><br>
+                       <a onclick="">
+                              @Html.ActionLink("Delete User Information", "Delete", "Users")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/allusers.png" alt="allusers"><br>
+                        <a onclick="">
+                              @Html.ActionLink("All Users Information", "ShowAll", "Users")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="products" id="products">
+        <h2 class="special-heading">Products</h2>
+        <div class="container">
+            <div class="productscontent">
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/addproduct.png" alt="add"><br>
+                        <a href="">
+                              @Html.ActionLink("Add Car Information", "Create", "Products")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/updateproduct.png" alt="update"><br>
+                        <a href="">
+                              @Html.ActionLink("Update Car Information", "Update", "Products")
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/deleteproduct.png" alt="delete"><br>
+                        <a href="">
+                              @Html.ActionLink("Delete Car Information", "Delete", "Products")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/allproducts.png" alt="allproducts"><br>
+                        <a href="">
+                              @Html.ActionLink("All Cars Information", "ShowAll", "Products")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="suppliers" id="suppliers">
+        <h2 class="special-heading">Suppliers</h2>
+        <div class="container">
+            <div class="supplierscontent">
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/addsupplier.png" alt="add"><br>
+                        <a onclick="">
+                              @Html.ActionLink("Add Supplier Information", "Create", "Suppliers")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/updatesupplier.png" alt="update"><br>
+                        <a onclick="">
+                              @Html.ActionLink("Update Supplier Information", "Update", "Suppliers")
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/deletesupplier.png" alt="delete"><br>
+                        <a onclick="">
+                              @Html.ActionLink("Delete Supplier Information", "Delete", "Suppliers")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/allsuppliers.png" alt="allsuppliers"><br>
+                        <a onclick="">
+                              @Html.ActionLink("All Suppliers Information", "ShowAll", "Suppliers")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="customers" id="customers">
+        <h2 class="special-heading">Customers</h2>
+        <div class="container">
+            <div class="customerscontent">
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/addcustomer.png" alt="add"><br>
+                        <a href="AddCustomer.html">
+                              @Html.ActionLink("Add Customer Information", "Create", "Customers")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/updatecustomer.png" alt="update"><br>
+                        <a href="AddCustomer.html">
+                              @Html.ActionLink("Update Customer Information", "Update", "Customers")
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/deletecustomer.png" alt="delete"><br>
+                        <a href="AddCustomer.html">
+                              @Html.ActionLink("Delete Customer Information", "Delete", "Customers")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/allcustomers.png" alt="allcustomers"><br>
+                        <a href="AddCustomer.html">
+                              @Html.ActionLink("All Customers Information", "ShowAll", "Customers")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sales" id="sales">
+        <h2 class="special-heading">Sales</h2>
+        <div class="container">
+            <div class="salescontent">
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/salescash.png" alt="add"><br>
+                        <a onclick="">
+                            @Html.ActionLink("Add Sales Cash Information", "Get_Info_Customer", "Cash")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/deletesales.png" alt="delete"><br>
+                        <a onclick="">
+                            @Html.ActionLink("Delete Sales Information", "Delete", "Cash")
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="srv">
+                        <img src="~/Content/photos/allsales.png" alt="allsales"><br>
+                        <a onclick="">
+                            @Html.ActionLink("All Sales Information", "ShowAll", "Cash")
+                        </a>
+                    </div>
+                    <div class="srv">
+                        <img src="~/Content/photos/salesinstall.png" alt="add"><br>
+                        <a onclick="">
+                            @Html.ActionLink("Add Sales Installment Information", "Get_Info_Customer", "Installment")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p class="copyright"> &copy; 2022 - All Rights Reserved - Muhammad Gomaa</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/javascript/Proj6.js"></script>
+    @*<script>
+        function  OnCheck(){
+            if (@Type != "Supervisor") {
+                alert("Access is Denaid");
+            }
+        }
+    </script>*@
+</body>
+
+</html>

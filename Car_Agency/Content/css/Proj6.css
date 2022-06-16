@@ -1,0 +1,2698 @@
+/*Start Global Rules*/
+
+/* Variables */
+:root {
+    --web-color: #C29B4E;
+    --backgound-color: #6396afb7;
+    --special-color: #CA351F;
+    --special-color1: #6F9DB4
+}
+
+/* Box Sizing */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* 34an l scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 7agm l 5at w no3o w bgybo mn google fonts */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.parent {
+    text-align: center;
+}
+
+/* Lazm l container yb2a 3ndi 34an yb2a kol l website's contents ta7t ba3dohm */
+.container {
+    padding-right: 15px;
+    /*34an l klam fy l mobile ybd2 mn l middle brdo*/
+    padding-left: 15px;
+    margin-left: auto;
+    /*34an l klam ybd2 fy l middle*/
+    margin-right: auto;
+    height: 50px;
+}
+
+
+/*Bootstrap Codes*/
+/* Small Devices => Landscap Phones */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*Medium*/
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/*Large*/
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*End Global Rules*/
+
+/* Start Components */
+
+.special-heading {
+    color: var(--web-color);
+    font-size: 100px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: -3px;
+    padding: 10px;
+    margin: 0;
+
+}
+
+@media (max-width:767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+}
+
+/* End Components */
+
+/* Start Header */
+
+/* 34an a5li l header l background bta3to transparent */
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header .container img {
+    margin-top: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header .menu {
+        display: none;
+    }
+
+    .header .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header .container .links ul {
+        display: none;
+    }
+
+    .header .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: var(--backgound-color);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header .links:hover ul {
+        display: block;
+    }
+
+    .header .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header .container .links ul li a {       
+        color: white;
+    }
+
+    .header .container .links ul li a:hover {       
+        color: var(--web-color);
+    }
+
+    .header .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header */
+
+/* Start Operation Header */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-op {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-op .container img {
+    margin-top: 20px;
+}
+
+.header-op .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-op .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-op .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-op .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 18px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-op .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-op .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-op .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-op .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-op .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-op .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-op .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-op .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-op .menu {
+        display: none;
+    }
+
+    .header-op .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-op .container .links ul {
+        display: none;
+    }
+
+    .header-op .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: var(--backgound-color);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-op .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-op .links:hover ul {
+        display: block;
+    }
+
+    .header-op .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-op .container .links ul li a {       
+        color: white;
+    }
+
+    .header-op .container .links ul li a:hover {       
+        color: var(--web-color);
+    }
+
+    .header-op .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-op .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End  Operation Header */
+
+
+/* Start Landing */
+
+/* 34an a5li l background ta5oud l full screen */
+.landing {
+    background-image: url("../photos/back1.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.landing .intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: var(--backgound-color);
+    text-align: center;
+    width: 370px;
+    max-width: 100%;
+}
+
+.landing .intro h1 {
+    margin: 0;
+    font-size: 58px;
+    font-weight: lighter;
+}
+
+.landing .intro span{
+    color: var(--web-color);
+    font-weight: bolder;
+}
+
+/* End Landing */
+
+/* Start Operation Landing */
+
+/* 34an a5li l background ta5oud l full screen */
+.landing-op {
+    background-image: url("../photos/cusback.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.landing-op .intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: var(--backgound-color);
+    text-align: center;
+    width: 370px;
+    max-width: 100%;
+}
+
+.landing-op .intro h1 {
+    margin: 0;
+    font-size: 58px;
+    font-weight: lighter;
+}
+
+.landing-op .intro span{
+    color: var(--web-color);
+    font-weight: bolder;
+}
+
+/* End Operation Landing */
+
+/* Start About */
+
+.about {
+    padding-top: 25px;
+    padding-bottom: 480px;
+    background-color: var(--backgound-color);
+
+}
+
+@media (max-width : 1200px) {
+    .about {
+        padding-top: 50px;
+        padding-bottom: 650px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 500px) {
+    .about {
+        padding-top: 50px;
+        padding-bottom: 650px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.about .aboutcontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.about .aboutcontent .card {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 767px) {
+    .about .aboutcontent .card {
+        padding: 20px;
+        text-align: center;
+        background-color: var(--backgound-color);
+    }
+}
+
+
+.about .aboutcontent .card img {
+    max-width: 100%;
+}
+
+.about .aboutcontent .card h2 {
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: 35px;
+
+}
+
+.about .aboutcontent .card p {
+    font-size: 20px;
+    padding: 30px;
+    letter-spacing: 2px;
+}
+
+@media (max-width : 400px) {
+
+
+    .about .aboutcontent .card img {
+        max-width: 100%;
+    }
+
+    .about .aboutcontent .card h2 {
+        margin-top: 20px;
+        letter-spacing: 2px;
+        font-size: 25px;
+
+    }
+
+    .about .aboutcontent .card p {
+        font-size: 15px;
+        padding: 30px;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+/* End About */
+
+/* Start Services */
+
+.services {
+    padding-top: 25px;
+    padding-bottom: 500px;
+    background-color: var(--backgound-color);
+
+}
+
+@media (max-width : 1200px) {
+    .services {
+        padding-top: 50px;
+        padding-bottom: 750px;
+        background-color: var(--backgound-color);
+
+    }
+}
+
+@media (max-width : 690px) {
+    .services {
+        padding-top: 50px;
+        padding-bottom: 900px;
+        background-color: var(--backgound-color);
+
+    }
+}
+
+.services .servicescontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.services .servicescontent .card {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--special-color1);
+}
+
+@media (max-width : 767px) {
+    .services .servicescontent .card {
+        padding: 20px;
+        text-align: center;
+        background-color: var(--special-color1);
+    }
+}
+
+.services .servicescontent .card img {
+    max-width: 100%;
+    padding: 3px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.services .servicescontent .card p {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width : 767px) {
+    .services .servicescontent .card img {
+        max-width: 100%;
+        padding: 3px;
+        background-color: #f6f6f6;
+        border: 1px solid #ccc;
+        margin: 5px;
+    }
+
+    .services .servicescontent .card p {
+        margin: 0;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width : 690px) {
+    .services .servicescontent .card img {
+        width: 200px;
+        padding: 3px;
+        background-color: #f6f6f6;
+        border: 1px solid #ccc;
+        margin: 5px;
+    }
+
+    .services .servicescontent .card p {
+        margin: 0;
+        margin: 0;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* End Services */
+
+/* Start Numbers */
+
+.numbers{
+    padding-top: 25px;
+    padding-bottom: 700px;
+    background-color: var(--backgound-color);
+  } 
+  
+  .numbers .numbers-box{
+    background-color: var(--special-color1);
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+  
+  .numbers .numbers-box .numbers-name{
+    font-weight: lighter;
+    width: 140px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+  }
+  
+  .numbers .numbers-box .numbers-progress{
+    height: 30px;
+    width: 900px;
+    background-color: rgba(221, 221, 221, 0.363);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .numbers .numbers-box .numbers-progress span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--web-color);
+    transition: all 5s;
+  }
+
+  @media (max-width : 990px) {
+    .numbers .special-heading{
+        font-size: 80px;
+    }
+}
+
+
+@media (max-width : 660px) {
+    .numbers .special-heading{
+        font-size: 50px;
+    }
+}
+  
+/* End Numbers */
+  
+/* Start Pricing */
+
+.pricing {
+    padding-top: 25px;
+    padding-bottom: 1200px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .pricing {
+        padding-top: 10px;
+        padding-bottom: 1200px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 670px) {
+    .pricing {
+        padding-top: 10px;
+        padding-bottom: 2000px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.pricing .plans {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .plans .plan {
+    background-color: var(--special-color1);
+    text-align: center;
+    color: black;
+}
+
+.pricing .plans .plan .head {
+    padding: 40px 20px;
+    border-bottom: 3px solid white;
+
+}
+
+.pricing .plans .plan .head h3 {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.pricing .plans .plan .head span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.pricing .plans .plan .head span::after {
+    content: " L.E";
+}
+
+.pricing .plans .plan ul {
+    border-bottom: 3px solid var(--web-color);
+}
+
+.pricing .plans .plan ul li {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.pricing .plans .plan .foot a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: black;
+    border: 3px solid var(--web-color);
+}
+
+
+@media (max-width : 700px) {
+    .pricing .plans .plan .head h3 {
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
+    .pricing .plans .plan .head span {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .pricing .plans .plan ul li {
+        padding: 20px;
+        font-size: 10px;
+    }
+}
+
+/* End Pricing */
+
+/* Start Contact */
+
+.contact {
+    padding-top: 25px;
+    padding-bottom: 600px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .contact {
+        padding-top: 10px;
+        padding-bottom: 600px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .contact {
+        padding-top: 10px;
+        padding-bottom: 600px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .content form {
+    flex-basis: 80%;
+}
+
+.contact .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 3px solid var(--special-color1);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.contact .content form textarea.main-input {
+    height: 150px;
+}
+
+.contact .content form .submit {
+    background-color: var(--special-color1);
+    color: white;
+    padding: 15px;
+    border: none;
+    display: flex;
+    margin-right: auto;
+    /* 34an a5leh yro7 chmal l content */
+    cursor: pointer;
+    border: 2px solid var(--web-color);
+    font-size: 18px;
+}
+
+.contact .info img {
+    width: 350px;
+}
+
+@media (max-width : 997px) {
+    .contact .info img {
+        width: 300px;
+    }
+
+    .contact .content form {
+        flex-basis: 80%;
+    }
+}
+
+@media (max-width : 500px) {
+    .contact .info img {
+        display: none;
+    }
+
+    .contact .content form {
+        flex-basis: 80%;
+    }
+}
+
+/* End Contact */
+
+/* Start Footer */
+
+.footer {
+    padding-top: 25px;
+    padding-bottom: 40px;
+    background-color: var(--special-color1);
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+    border-top: 2px dotted var(--web-color);
+}
+
+.footer .social-icons i {
+    padding: 10px 15px;
+}
+
+.footer .copyright {
+    font-size: large;
+}
+
+@media (max-width : 450px) {
+    .footer .copyright {
+        font-size: 10px;
+    }
+}
+
+/* End Footer */
+
+/* Start Header Login */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-login {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-login .container img {
+    margin-top: 20px;
+}
+
+.header-login .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* End Header Login */
+
+/* Start Login Section*/
+
+.login {
+    padding-top: 50px;
+    padding-bottom: 600px;
+    min-height: 100vh;
+    background-image: url('../photos/back6.jpeg');
+    background-size: cover;
+    position: relative;
+}
+
+.login .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    }
+
+@media (max-width : 997px) {
+    .login {
+        padding-top: 50px;
+        padding-bottom: 600px;
+        min-height: 100vh;
+        background-image: url('../photos/back6.jpeg');
+        background-size: cover;
+        position: relative;
+    }
+    
+    .login .overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        }
+}
+
+@media (max-width : 640px) {
+    .login {
+        padding-top: 50px;
+        padding-bottom: 600px;
+        min-height: 100vh;
+        background-image: url('../photos/back.jpg');
+        background-size: cover;
+        position: relative;
+    }
+    
+    .login .overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        }
+}
+
+.login .content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login .content form {
+    position: relative;
+    z-index: 2;
+    flex-basis: 80%;
+    padding-top: 50px;
+}
+
+.login .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 2px solid var(--web-color);
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.login .content form .submit {
+    background-color: var(--web-color);
+    color: black;
+    padding: 15px;
+    border: none;
+    display: flex;
+    margin-right: auto;
+    /* 34an a5leh yro7 ymen l content */
+    cursor: pointer;
+    border: 2px solid var(--web-color);
+    font-size: 18px;
+    color: white;
+
+}
+
+@media (max-width : 997px) {
+
+    .login .content form {
+        flex-basis: 80%;
+        padding-top: 50px;
+    }
+
+}
+
+@media (max-width : 767px) {
+
+    .login .content form {
+        flex-basis: 80%;
+        padding-top: 50px;
+    }
+
+}
+
+.special-heading-login {
+    color: var(--web-color);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+
+}
+
+@media (max-width:600px) {
+
+    .login .content form {
+        flex-basis: 100%;
+        padding-top: 50px;
+    }
+
+    .special-heading-login {
+        color: var(--web-color);
+        font-size: 30px;
+        text-align: center;
+        font-weight: bolder;
+        letter-spacing: -1px;
+        padding: 10px;
+        margin: 0;
+
+    }
+}
+
+/* End Login Section */
+
+/* Start Add Section*/
+
+.add {
+    padding-top: 50px;
+    padding-bottom: 750px;
+    background-image: url("../photos/back3.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+@media (max-width : 997px) {
+    .add {
+        padding-top: 50px;
+        padding-bottom: 750px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .add {
+        padding-top: 50px;
+        padding-bottom: 750px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.add .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add .content form {
+    flex-basis: 50%;
+    padding-top: 50px;
+}
+
+.add .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 2px solid var(--web-color);
+    margin-bottom: 30px;
+    width: 80%
+}
+
+.add .content form .submit {
+    background-color: var(--web-color);
+    color: black;
+    padding: 15px;
+    border: none;
+    display: flex;
+    margin-right: auto;
+    /* 34an a5leh yro7 ymen l content */
+    cursor: pointer;
+    border: 2px solid var(--web-color);
+    font-size: 18px;
+    color: white;
+}
+
+@media (max-width : 997px) {
+
+    .add .content form {
+        flex-basis: 80%;
+        padding-top: 50px;
+    }
+
+}
+
+@media (max-width : 767px) {
+
+    .add .content form {
+        flex-basis: 80%;
+        padding-top: 50px;
+    }
+
+}
+
+.special-heading-add {
+    color: var(--web-color);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding: 10px;
+    margin: 0;
+
+}
+
+@media (max-width:600px) {
+
+    .add .content form {
+        flex-basis: 100%;
+        padding-top: 50px;
+    }
+
+    .special-heading-add {
+        color: var(--web-color);
+        font-size: 25px;
+        text-align: center;
+        font-weight: bolder;
+        letter-spacing: -1px;
+        padding: 10px;
+        margin: 0;
+
+    }
+}
+
+/* End Add Section */
+
+/* Start Special Add Section*/
+
+.special-add {
+    padding-top: 50px;
+    padding-bottom: 1400px;
+    background-image: url("../photos/back5.jpeg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+@media (max-width : 997px) {
+    .special-add {
+        padding-top: 50px;
+        padding-bottom: 1100px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .special-add {
+        padding-top: 50px;
+        padding-bottom: 1100px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.special-add .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.special-add .content form {
+    flex-basis: 50%;
+    padding-top: 50px;
+}
+
+.special-add .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 2px solid var(--web-color);
+    margin-bottom: 30px;
+    width: 80%
+}
+
+.special-add .content form .submit {
+    background-color: var(--web-color);
+    color: black;
+    padding: 15px;
+    border: none;
+    display: flex;
+    margin-right: auto;
+    /* 34an a5leh yro7 ymen l content */
+    cursor: pointer;
+    border: 2px solid var(--web-color);
+    font-size: 18px;
+    color: white;
+}
+
+@media (max-width : 997px) {
+
+    .special-add .content form {
+        flex-basis: 80%;
+        padding-top: 50px;
+    }
+
+}
+
+@media (max-width : 767px) {
+
+    .special-add .content form {
+        flex-basis: 80%;
+        padding-top: 50px;
+    }
+
+}
+
+.special-heading-special-add {
+    color: var(--web-color);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding: 10px;
+    margin: 0;
+
+}
+
+@media (max-width:600px) {
+
+    .special-add .content form {
+        flex-basis: 100%;
+        padding-top: 50px;
+    }
+
+    .special-heading-special-add {
+        color: var(--web-color);
+        font-size: 25px;
+        text-align: center;
+        font-weight: bolder;
+        letter-spacing: -1px;
+        padding: 10px;
+        margin: 0;
+
+    }
+}
+
+/* End Special Add Section */
+
+/* Start Table Section */
+
+.table {
+    padding-top: 50px;
+    padding-bottom: 600px;
+    background-image: url("../photos/back.jpeg");
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+@media (max-width : 997px) {
+    .table {
+        padding-top: 50px;
+        padding-bottom: 600px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .table {
+        padding-top: 50px;
+        padding-bottom: 600px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.table .content {
+    display: block;
+    height: 550px;
+    overflow-y: auto;
+}
+
+.table .content table {
+    flex-basis: 100%;
+}
+
+.table th,
+table td {
+    border: 1px solid var(--web-color);
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.table .content table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 60px;
+    text-align: center;
+    background-color: var(--web-color);
+    color: white;
+    font-size: 25px;
+}
+
+.submit {
+    background-color: var(--web-color);
+    padding: 15px;
+    border: none;
+    display: flex;
+    margin-right: auto;
+    /* 34an a5leh yro7 ymen l content */
+    cursor: pointer;
+    border: 2px solid var(--web-color);
+    font-size: 18px;
+    color: white;
+}
+
+@media (max-width : 600px) {
+    .table .content table th {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 10px;
+        text-align: center;
+        background-color: var(--web-color);
+        color: white;
+    }
+
+    .table th,
+    table td {
+        border: 1px solid var(--web-color);
+        background-color: white;
+        padding: 5px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .submit {
+        background-color: var(--web-color);
+        padding: 15px;
+        border: none;
+        display: flex;
+        margin-right: auto;
+    /* 34an a5leh yro7 ymen l content */
+        cursor: pointer;
+        border: 2px solid var(--web-color);
+        font-size: 10px;
+        color: white;
+    }
+}
+
+.special-heading-table {
+    color: var(--web-color);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding: 10px;
+    margin: 0;
+
+}
+
+@media (max-width:767px) {
+    .special-heading-table {
+        font-size: 20px;
+    }
+}
+
+/* End Table Section */
+
+/* Start User */
+.users {
+    padding-top: 25px;
+    padding-bottom: 400px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .users {
+        padding-top: 10px;
+        padding-bottom: 400px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .users {
+        padding-top: 10px;
+        padding-bottom: 800px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.users .userscontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.users .userscontent .srv {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width : 767px) {
+    .users .userscontent .srv {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.users .userscontent .srv a {
+    padding-top: 30px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* End User */
+
+/* Start Header User */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-user {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-user .container img {
+    margin-top: 20px;
+}
+
+.header-user .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-user .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-user .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-user .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-user .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-user .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-user .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-user .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-user .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-user .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-user .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-user .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-user .menu {
+        display: none;
+    }
+    .header-user .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-user .container .links ul {
+        display: none;
+    }
+
+    .header-user .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.815);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-user .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-user .links:hover ul {
+        display: block;
+    }
+
+    .header-user .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-user .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-user .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header User */
+
+/* Start Product */
+
+.products {
+    padding-top: 25px;
+    padding-bottom: 400px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .products {
+        padding-top: 10px;
+        padding-bottom: 400px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .products {
+        padding-top: 10px;
+        padding-bottom: 800px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.products .productscontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.products .productscontent .srv {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width : 767px) {
+    .products .productscontent .srv {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.products .productscontent .srv a {
+    padding-top: 30px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* End Products */
+
+/* Start Header Product */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-product {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-product .container img {
+    margin-top: 20px;
+}
+
+.header-product .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-product .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-product .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-product .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-product .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-product .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-product .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-product .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-product .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-product .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-product .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-product .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-product .menu {
+        display: none;
+    }
+
+    .header-product .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-product .container .links ul {
+        display: none;
+    }
+
+    .header-product .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.815);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-product .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-product .links:hover ul {
+        display: block;
+    }
+
+    .header-product .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-product .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-product .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header Product */
+
+/* Start Supplier */
+
+.suppliers {
+    padding-top: 25px;
+    padding-bottom: 400px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .suppliers {
+        padding-top: 10px;
+        padding-bottom: 400px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .suppliers {
+        padding-top: 10px;
+        padding-bottom: 800px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.suppliers .supplierscontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.suppliers .supplierscontent .srv {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width : 767px) {
+    .suppliers .supplierscontent .srv {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.suppliers .supplierscontent .srv a {
+    padding-top: 30px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* End Supplier */
+
+/* Start Header Supplier */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-supplier {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-supplier .container img {
+    margin-top: 20px;
+}
+
+.header-supplier .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-supplier .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-supplier .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-supplier .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-supplier .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-supplier .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-supplier .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-supplier .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-supplier .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-supplier .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-supplier .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-supplier .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-supplier .menu {
+        display: none;
+    }
+
+    .header-supplier .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-supplier .container .links ul {
+        display: none;
+    }
+
+    .header-supplier .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.815);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-supplier .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-supplier .links:hover ul {
+        display: block;
+    }
+
+    .header-supplier .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-supplier .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-supplier .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header Supplier */
+
+/* Start Customer */
+
+.customers {
+    padding-top: 25px;
+    padding-bottom: 400px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .customers {
+        padding-top: 10px;
+        padding-bottom: 400px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .customers {
+        padding-top: 10px;
+        padding-bottom: 800px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.customers .customerscontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.customers .customerscontent .srv {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width : 767px) {
+    .customers .customerscontent .srv {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.customers .customerscontent .srv a {
+    padding-top: 30px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* End Customer */
+
+/* Start Header Customer */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-customer {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-customer .container img {
+    margin-top: 20px;
+}
+
+.header-customer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-customer .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-customer .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-customer .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-customer .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-customer .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-customer .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-customer .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-customer .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-customer .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-customer .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-customer .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-customer .menu {
+        display: none;
+    }
+
+    .header-customer .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-customer .container .links ul {
+        display: none;
+    }
+
+    .header-customer .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.815);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-customer .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-customer .links:hover ul {
+        display: block;
+    }
+
+    .header-customer .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-customer .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-customer .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header Customer */
+
+/* Start Sales */
+
+.sales {
+    padding-top: 25px;
+    padding-bottom: 400px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .sales {
+        padding-top: 10px;
+        padding-bottom: 400px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .sales {
+        padding-top: 10px;
+        padding-bottom: 800px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.sales .salescontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.sales .salescontent .srv {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width : 767px) {
+    .sales .salescontent .srv {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.sales .salescontent .srv a {
+    padding-top: 30px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* End Sales */
+
+/* Start Header Sales */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-sales {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-sales .container img {
+    margin-top: 20px;
+}
+
+.header-sales .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-sales .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-sales .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-sales .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-sales .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-sales .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-sales .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-sales .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-sales .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-sales .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-sales .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-sales .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-sales .menu {
+        display: none;
+    }
+
+    .header-sales .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-sales .container .links ul {
+        display: none;
+    }
+
+    .header-sales .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.815);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-sales .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-sales .links:hover ul {
+        display: block;
+    }
+
+    .header-sales .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-sales .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-sales .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header Sales */
+
+/* Start Purchases */
+
+.purchases {
+    padding-top: 25px;
+    padding-bottom: 400px;
+    background-color: var(--backgound-color);
+}
+
+@media (max-width : 997px) {
+    .purchases {
+        padding-top: 10px;
+        padding-bottom: 400px;
+        background-color: var(--backgound-color);
+    }
+}
+
+@media (max-width : 640px) {
+    .purchases {
+        padding-top: 10px;
+        padding-bottom: 800px;
+        background-color: var(--backgound-color);
+    }
+}
+
+.purchases .purchasescontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.purchases .purchasescontent .srv {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width : 767px) {
+    .purchases .purchasescontent .srv {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.purchases .purchasescontent .srv a {
+    padding-top: 30px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* End Purchases */
+
+/* Start Header Purchases */
+
+/* 34an a5li l header l background bta3to transparent */
+.header-purchases {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+.header-purchases .container img {
+    margin-top: 20px;
+}
+
+.header-purchases .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-purchases .links {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 34an agyb links ganb ba3d as row */
+.header-purchases .container .links ul {
+    display: flex;
+}
+
+/* 34an a3mlohm edit w space bnhum */
+.header-purchases .container .links ul li a {
+    display: flex;
+    text-decoration: none;
+    display: block;
+    color: var(--web-color);
+    font-size: 25px;
+    padding-right: 40px;
+    position: relative;
+    text-align: center;
+    transition: 0.3 s;
+    z-index: 2;
+}
+
+.header-purchases .container .links {
+    flex: 1;
+    /* 34an ya5oud l msa7a l ba2ya kolha */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* lama ados 3lihhum yt8er lonhum */
+.header-purchases .container .links ul :hover {
+    color: var(--backgound-color);
+    padding-top: 2px;
+}
+
+/* Edit L Icon b3d m list t5tfi */
+.header-purchases .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-purchases .links .icon span:first-child {
+    width: 100%;
+}
+
+.header-purchases .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 1/3 s;
+}
+
+.header-purchases .links .icon span:last-child {
+    width: 100%;
+}
+
+.header-purchases .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header-purchases .links .icon span {
+    background-color: var(--web-color);
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+/* editha class 34an lama tb2a 3ala pc mtzhrch lakn 3ala l mobile tzhr w l3aks fy l list */
+
+@media (min-width:992px) {
+    .header-purchases .menu {
+        display: none;
+    }
+
+    .header-purchases .links .icon {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+    .header-purchases .container .links ul {
+        display: none;
+    }
+
+    .header-purchases .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.815);
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+    }
+
+    .header-purchases .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .header-purchases .links:hover ul {
+        display: block;
+    }
+
+    .header-purchases .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        transition: 1/3 s;
+    }
+
+    .header-purchases .links ul li a :hover {
+        padding-left: 25px;
+    }
+
+    .header-purchases .links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--web-color);
+    }
+}
+
+/* End Header Purchases */

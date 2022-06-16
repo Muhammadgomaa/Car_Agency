@@ -1,0 +1,268 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/Content/css/all.min.css" rel="stylesheet">
+    <link href="~/Content/css/normalize.css" rel="stylesheet">
+
+    <link href="~/Content/css/Proj6.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&family=Open+Sans:wght@300;400;700&display=swap"
+          rel="stylesheet">
+    <title>Home Page</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="~/Content/photos/logo.png" alt="logo">
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li><a href="#home"> Home </a></li>
+                    <li>@Html.ActionLink("Operation", "Operation")</li>
+                    <li><a href="#about"> About US </a></li>
+                    <li><a href="#services"> Services </a></li>
+                    <li><a href="#pricing"> Pricing </a></li>
+                    <li><a href="#contact"> Contact </a></li>
+                    <li>@Html.ActionLink("Logout", "Logout")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="landing" id="home">
+        <div class="intro">
+            <h1><span>Modern</span> Cars</h1><br>
+            <h1><span>Less</span> Price</h1>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="special-heading">About</h2>
+            <div class="aboutcontent">
+                <div class="card">
+                    <img src="~/Content/photos/about.png" alt="about">
+                    <h2>We grow businesses by creating experiences <span>pepole love</span></h2>
+                    <p>
+                        Today, most people tend to own luxury cars, and at the same time they find safety and privacy in
+                        them, which makes transportation easier and faster and at a cost that is not exorbitant with
+                        many facilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services" id="services">
+        <div class="container">
+            <h2 class="special-heading">Services</h2>
+            <div class="servicescontent">
+                <div class="card">
+                    <img src="~/Content/photos/serv1.jpeg" alt="serv1">
+                    <p>The latest luxury cars</p>
+                </div>
+                <div class="card">
+                    <img src="~/Content/photos/serv2.jpeg" alt="serv2">
+                    <p>
+                        The latest equipment and techniques for maintenance with a specialized and professional team
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="~/Content/photos/serv3.jpeg" alt="serv3">
+                    <p>Facilitations in the sale process and the addition of the installment option</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="numbers" id="numbers">
+        <div class="container">
+            <h2 class="special-heading">Sales Numbers</h2>
+            <div class="numbers-box">
+                <div class="numbers-name">Egypt</div>
+                <div class="numbers-progress">
+                    <span data-progress="95%"></span>
+                </div>
+            </div>
+            <div class="numbers-box">
+                <div class="numbers-name">KSA</div>
+                <div class="numbers-progress">
+                    <span data-progress="89%"></span>
+                </div>
+            </div>
+            <div class="numbers-box">
+                <div class="numbers-name">Tunisia</div>
+                <div class="numbers-progress">
+                    <span data-progress="78%"></span>
+                </div>
+            </div>
+            <div class="numbers-box">
+                <div class="numbers-name">Kuwait</div>
+                <div class="numbers-progress">
+                    <span data-progress="85%"></span>
+                </div>
+            </div>
+            <div class="numbers-box">
+                <div class="numbers-name">Qatar</div>
+                <div class="numbers-progress">
+                    <span data-progress="70%"></span>
+                </div>
+            </div>
+            <div class="numbers-box">
+                <div class="numbers-name">Moroco</div>
+                <div class="numbers-progress">
+                    <span data-progress="90%"></span>
+                </div>
+            </div>
+            <div class="numbers-box">
+                <div class="numbers-name">Ireland</div>
+                <div class="numbers-progress">
+                    <span data-progress="67%"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="special-heading">Pricing</h2>
+            <div class="plans">
+                <div class="plan">
+                    <div class="head">
+                        <h3>BMW</h3>
+                        <span>Start From 620000</span>
+                    </div>
+                    <ul>
+                        <li>12 M / 50%</li>
+                        <li>18 M / 40%</li>
+                        <li>24 M / 30%</li>
+                        <li>30 M / 20%</li>
+                    </ul>
+                    <div class="foot">
+                        <a href=""> Buy Now</a>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="head">
+                        <h3>Mercedes</h3>
+                        <span>Start From 780000</span>
+                    </div>
+                    <ul>
+                        <li>12 M / 50%</li>
+                        <li>18 M / 40%</li>
+                        <li>24 M / 30%</li>
+                        <li>30 M / 20%</li>
+                    </ul>
+                    <div class="foot">
+                        <a href=""> Buy Now</a>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="head">
+                        <h3>Volov</h3>
+                        <span>Start From 690000</span>
+                    </div>
+                    <ul>
+                        <li>12 M / 50%</li>
+                        <li>18 M / 40%</li>
+                        <li>24 M / 30%</li>
+                        <li>30 M / 20%</li>
+                    </ul>
+                    <div class="foot">
+                        <a href=""> Buy Now</a>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="head">
+                        <h3>Chevrolet</h3>
+                        <span>Start From 550000</span>
+                    </div>
+                    <ul>
+                        <li>12 M / 50%</li>
+                        <li>18 M / 40%</li>
+                        <li>24 M / 30%</li>
+                        <li>30 M / 20%</li>
+                    </ul>
+                    <div class="foot">
+                        <a href=""> Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Contact US</h2>
+            <div class="content">
+                <form action="">
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="main-input" />
+                    <input type="email" id="email" name="mail" placeholder="Your E-Mail" class="main-input" />
+                    <textarea name="message" id="message" placeholder="Your Message" class="main-input"></textarea>
+                    <input type="button" id="submit" value="Send Message" class="submit" />
+                </form>
+                <div class="info">
+                    <img src="~/Content/photos/contact.png" alt="contact">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p class="copyright"> &copy; 2022 - All Rights Reserved - Muhammad Gomaa</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/javascript/Proj6.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        $("#submit").click(function () {
+            var name = $("#name").val();
+            var mail = $("#email").val();
+            var mess = $("#message").val();
+
+            if (name == "" || mail == "" || mess == "") {
+                swal({
+                    title: "Fields Empty",
+                    text: "Please Complete The Required Information",
+                    icon: "warning",
+                    button: "OK",
+                });
+            }
+            else {
+                swal({
+                    title: "Successfully",
+                    text: "Message Sent",
+                    icon: "success",
+                    button: "OK",
+                });
+            }
+
+        })
+    </script>
+</body>
+
+</html>
